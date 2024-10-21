@@ -13,6 +13,13 @@ public class Main {
             System.out.print(firstWeight[i]+",");
         }
         System.out.println();
+        for(int i=0; i<firstWeight.length;i++){
+            if(firstWeight[i]%2!=0){
+            System.out.print(firstWeight[i]+1+",");
+            }
+        }
+
+        System.out.println();
         float [] secondWeight = {1.57f,7.654f, 9.986f};
         for (int j=0;j<secondWeight.length;j++) {
             System.out.print(secondWeight[j]+",");
