@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -5,9 +7,7 @@ public class Main {
         firstWeight[0] = 1;
         firstWeight[1] = 2;
         firstWeight[2] = 3;
-        for(int i=0; i<firstWeight.length;i++){
-            System.out.print(firstWeight[i]+",");
-        }
+        System.out.print(Arrays.toString(firstWeight));
         System.out.println();
         for(int i= firstWeight.length-1; i>=0;i--){
             System.out.print(firstWeight[i]+",");
