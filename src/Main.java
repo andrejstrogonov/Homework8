@@ -1,50 +1,46 @@
 import java.util.Arrays;
 
+
 public class Main {
     public static void main(String[] args) {
-
         int [] firstWeight = new int [3];
         firstWeight[0] = 1;
         firstWeight[1] = 2;
         firstWeight[2] = 3;
+        String firstWeightString = Arrays.toString(firstWeight);
         System.out.print(Arrays.toString(firstWeight));
-        System.out.println();
-        for(int i= firstWeight.length-1; i>=0;i--){
-            System.out.print(firstWeight[i]+",");
-        }
-        System.out.println();
-        for(int i=0; i<firstWeight.length;i++){
-            if(firstWeight[i]%2!=0){
-            System.out.print(firstWeight[i]+1+",");
+        String reversedFirstWeight = new StringBuilder(firstWeightString).reverse().toString().replace("]", "").replace("[","").replaceAll(", ",")]");
+
+        System.out.println("\n"+reversedFirstWeight);
+
+        for (int i = 0; i < firstWeight.length; i++) {
+            if (firstWeight[i] % 2 != 0) {
+                firstWeight[i] += 1;
             }
         }
+        System.out.println(Arrays.toString(firstWeight));
+
 
         System.out.println();
         float [] secondWeight = {1.57f,7.654f, 9.986f};
-        for (int j=0;j<secondWeight.length;j++) {
-            System.out.print(secondWeight[j]+",");
+
+        float[] reversedSecondWeight = new float[secondWeight.length];
+        for (int i = 0; i < secondWeight.length; i++) {
+            reversedSecondWeight[i] = secondWeight[secondWeight.length - 1 - i];
         }
-        System.out.println();
-        for(int i= secondWeight.length-1; i>=0;i--){
-            System.out.print(secondWeight[i]+",");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(reversedSecondWeight));
+
         long [] thirdWeight = new long [5];
         thirdWeight[0]= 45635776765767L;
         thirdWeight[1]= 7635657367657367L;
         thirdWeight[2]= 3365767653L;
         thirdWeight[3]= 56737675L;
         thirdWeight[4]= 76675353365L;
-        for (int i=0;i<thirdWeight.length;i++) {
-            System.out.print(thirdWeight[i] + ",");
+        long[] reversedThirdWeight = new long[thirdWeight.length];
+        for (int i = 0; i < thirdWeight.length; i++) {
+            reversedThirdWeight[i] = thirdWeight[thirdWeight.length - 1 - i];
         }
-        System.out.println();
-        for(int i= thirdWeight.length-1; i>=0;i--){
-            System.out.print(thirdWeight[i]+",");
-        }
-
-
-
+        System.out.println(Arrays.toString(reversedThirdWeight));
 
 
     }
