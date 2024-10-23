@@ -9,7 +9,8 @@ public class Main {
         firstWeight[2] = 3;
         String firstWeightString = Arrays.toString(firstWeight);
         System.out.print(Arrays.toString(firstWeight));
-        String reversedFirstWeight = new StringBuilder(firstWeightString).reverse().toString().replace("]", "").replace("[","").replaceAll(", ",")]");
+        String reversedFirstWeight = new StringBuilder(firstWeightString).reverse().toString().replace("]"
+                , "").replace("[","").replaceAll(", ",")]");
 
         System.out.println("\n"+reversedFirstWeight);
 
@@ -41,7 +42,5 @@ public class Main {
             reversedThirdWeight[i] = thirdWeight[thirdWeight.length - 1 - i];
         }
         System.out.println(Arrays.toString(reversedThirdWeight));
-
-
     }
 }
