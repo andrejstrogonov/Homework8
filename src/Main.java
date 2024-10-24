@@ -1,6 +1,5 @@
 import java.util.Arrays;
 
-
 public class Main {
     public static void main(String[] args) {
         int [] firstWeight = new int [3];
@@ -9,11 +8,18 @@ public class Main {
         firstWeight[2] = 3;
         String firstWeightString = Arrays.toString(firstWeight);
         System.out.print(Arrays.toString(firstWeight));
-        String reversedFirstWeight = new StringBuilder(firstWeightString).reverse().toString().replace("]"
-                , "").replace("[","").replaceAll(", ",")]");
-
-        System.out.println("\n"+reversedFirstWeight);
-
+        for (int i = 0; i < firstWeight.length; i++) {
+            System.out.print(firstWeight[i]);
+            if (i != firstWeight.length - 1) {
+                System.out.print(",");
+            }
+        }
+        int[] reversedFirstWeight = new int[firstWeight.length];
+        for (int i = 0; i < firstWeight.length; i++) {
+            reversedFirstWeight[i] = firstWeight[firstWeight.length - 1 - i];
+        }
+        System.out.println(Arrays.toString(reversedFirstWeight));
+        System.out.println();
         for (int i = 0; i < firstWeight.length; i++) {
             if (firstWeight[i] % 2 != 0) {
                 firstWeight[i] += 1;
